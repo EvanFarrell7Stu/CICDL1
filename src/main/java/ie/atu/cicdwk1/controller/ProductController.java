@@ -2,10 +2,7 @@ package ie.atu.cicdwk1.controller;
 
 import ie.atu.cicdwk1.model.Product;
 import ie.atu.cicdwk1.service.ProductService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +15,8 @@ public class ProductController {
         this.productService = productService;
     }
 
-    public List<Product> getAll{
+    @GetMapping
+    public List<Product> getProducts(){
         return productService.getAll();
     }
 
@@ -26,4 +24,4 @@ public class ProductController {
     public Product create(@RequestBody Product product) {
         return productService.create(product);
     }
-}
+ }
