@@ -3,6 +3,7 @@ package ie.atu.cicdwk1.Service;
 import ie.atu.cicdwk1.model.Product;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +17,8 @@ public List<Product> getAll() {
     return products;
 }
 
-@PostMapping
-public Product create(@RequestBody Product product) {
+
+public Product create(Product product) {
     product.setId(nextId++);
     products.add(product);
     return product;

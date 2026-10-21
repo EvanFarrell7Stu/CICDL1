@@ -1,7 +1,7 @@
 package ie.atu.cicdwk1.controller;
 
 import ie.atu.cicdwk1.model.Product;
-import ie.atu.cicdwk1.service.ProductService;
+import ie.atu.cicdwk1.Service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
